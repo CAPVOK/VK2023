@@ -1,0 +1,70 @@
+.dropDown {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.dropDown-menu {
+    position: relative;
+    width: 100%;
+}
+
+.dropDown-menu input {
+    display: none;
+}
+
+.dropDown-menu label {
+    display: block;
+    width: 100%;
+    padding: 8px 12px 8px 12px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    outline: 1px solid #d5d5d5;
+}
+
+.dropDown-menu label:hover {
+    outline: 1px solid #94bded;
+    background-color: #eeeeee;
+}
+
+.dropDown-menu input[type="checkbox"]:checked~ul {
+    display: block;
+}
+
+.dropDown-menu input[type="checkbox"]:checked~label {
+    outline: 1px solid #4fa1ff;
+    background-color: #eeeeee;
+    border-radius: 10px 10px 0 0;
+}
+
+.dropDown-menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-height: 120px;
+    overflow-y: auto;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-top: 1px solid #4fa1ff;
+    outline: 1px solid #d5d5d5;
+}
+
+.dropDown-menu li {
+    padding: 8px;
+}
+
+.dropDown-menu li:hover {
+    background: #eeeeee;
+}
