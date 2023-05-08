@@ -8,31 +8,75 @@
 body {
   font-family: 'VK_Sans_Regular', sans-serif;
   background-color: #0077FF;
+  height: 100%;
 }
 
 .main {
-  width: 100%;
-  height: 100vh;
+  width: 100%;  
+  min-height: 100%;
+  height: auto;
   padding: 20px;
-  display: flex;
-  flex-direction: row;
-  column-gap: 20px;
-}
-
-.sideBar {
-  width: 45%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .form {
-  width: 55%;
+  width: 100%;
   height: 100%;
   padding: 20px;
   border-radius: 12px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.formHeader {
+  width: 100%;
+  padding: 20px 0 20px 0;
+  font-size: 2em;
+  border-bottom: 4px solid #eeeeee;
+  margin-bottom: 20px;
+}
+
+.formBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.formMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.gif {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,8 +88,9 @@ body {
 
 .error {
   width: 100%;
-  margin-bottom: 20px;
+  height: 30px;
   color: #FF3347;
+  font-size: 1.2em;
 }
 
 .buttons {
@@ -53,4 +98,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .formMenu {
+    flex-direction: column;
+  }
 }

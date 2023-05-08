@@ -1,9 +1,6 @@
 .dropDown {
     width: 100%;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    height: 70px;
 }
 
 p {
@@ -35,16 +32,6 @@ p {
     background-color: #eeeeee;
 }
 
-.dropDown-menu input[type="checkbox"]:checked~ul {
-    display: block;
-}
-
-.dropDown-menu input[type="checkbox"]:checked~label {
-    outline: 1px solid #4fa1ff;
-    background-color: #eeeeee;
-    border-radius: 10px 10px 0 0;
-}
-
 .dropDown-menu ul {
     display: none;
     position: absolute;
@@ -59,6 +46,16 @@ p {
     background-color: white;
     border-top: 1px solid #4fa1ff;
     outline: 1px solid #d5d5d5;
+}
+
+.dropDown-menu input[type="checkbox"]:checked~ ul {
+    display: block;
+}
+
+.dropDown-menu input[type="checkbox"]:checked~label {
+    outline: 1px solid #4fa1ff;
+    background-color: #eeeeee;
+    border-radius: 10px 10px 0 0;
 }
 
 .dropDown-menu li {

@@ -3,11 +3,9 @@ import './DropDown.css';
 
 export default function DropDown({ list, label, placeHolder, callBack, value, tab }) {
     const [checked, setChecked] = useState(false);
-    const [selected, setSelected] = useState(placeHolder);
     const dropDownRef = useRef(null);
 
     const handleClick = (e) => {
-        setSelected(e.target.getAttribute('value'));
         setChecked(!checked);
         callBack(e.target.getAttribute('value'));
     }
@@ -27,7 +25,7 @@ export default function DropDown({ list, label, placeHolder, callBack, value, ta
 
     useEffect(() => {
         if (value === '') {
-            setSelected(placeHolder);
+            callBack(placeHolder);
         };
     }, [value])
 
@@ -37,14 +35,14 @@ export default function DropDown({ list, label, placeHolder, callBack, value, ta
                 <p>{label}</p>
                 <div className='dropDown-menu'>
                     <input type='checkbox' id={label} tabIndex={tab} checked={checked} onChange={() => setChecked(!checked)} />
-                    <label htmlFor={label} >{selected}</label>
+                    <label htmlFor={label} >{value}</label>
                     <ul>
-                        {list.map((item) => item.available &&
+                        {list.map((item) =>
                             <li
                                 onClick={handleClick}
                                 key={item.value}
                                 value={item.value}
-                                style={selected === item.value ? { backgroundColor: "#eeeeee" } : {}}
+                                style={value === item.value ? { backgroundColor: "#eeeeee" } : {}}
                             >
                                 {item.value}
                             </li>
