@@ -16,3 +16,8 @@
 При отправке формы данные упаковываются в JSON, выводится модальное окно. 
 
 <img width="1233" alt="image" src="https://github.com/CAPVOK/vk2023/assets/102176180/7622870d-a08b-4562-9896-7a8d5cfc3b46">
+<img width="725" alt="image" src="https://github.com/CAPVOK/vk2023/assets/102176180/f984ada1-e4c3-4cd3-976a-fa3ce41cef1f">
+<img width="489" alt="image" src="https://github.com/CAPVOK/vk2023/assets/102176180/93f3e010-1300-4283-aa76-9bc220337a93">
+
+
+
